@@ -128,7 +128,7 @@
         android:autofillHints="no"
         android:visibility="gone"
         android:hint="@string/editText"
-        android:textSize="16sp"
+        android:textSize="12sp"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/work"
         app:layout_constraintLeft_toLeftOf="parent"

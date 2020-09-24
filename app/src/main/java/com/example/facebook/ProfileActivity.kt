@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
+import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.profile_activity.*
 
 
@@ -12,6 +12,12 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_activity)
+
+        val name = intent.getStringExtra("name")
+        val surname = intent.getStringExtra("surname")
+        val town = intent.getStringExtra("city")
+        username.text = name?.plus(" ").plus(surname)
+        city.text = town
 
         button.setOnClickListener {
             city.visibility = View.GONE
